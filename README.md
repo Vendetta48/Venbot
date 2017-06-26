@@ -1,2 +1,0 @@
-# Venbot
-Supraball Meme Bot
