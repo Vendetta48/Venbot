@@ -31,7 +31,7 @@ namespace Venbot2
         {
             rand = new Random();
 
-            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Ryan Feeley\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
+            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Vendetta48\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
             System.Console.WriteLine("Contents of lb.array.txt = ");
             foreach (string lbquotes in lbquotes)
             {
@@ -126,7 +126,7 @@ namespace Venbot2
                 });
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("MzI4NDE5NTI1MzMyNjk3MDg5.DDDs7Q.NdVY - 54X1EB9JrH0x9ocJtbWhxo", TokenType.Bot);
+                
             });
         }
         private void RegisterCommand()
