@@ -31,7 +31,7 @@ namespace Venbot2
         {
             rand = new Random();
 
-            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Ryan Feeley\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
+            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Vendetta48\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
             System.Console.WriteLine("Contents of lb.array.txt = ");
             foreach (string lbquotes in lbquotes)
             {
