@@ -118,7 +118,7 @@ namespace Venbot2
                 });
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("MzI4NDE5NTI1MzMyNjk3MDg5.DDDs7Q.NdVY - 54X1EB9JrH0x9ocJtbWhxo", TokenType.Bot);
+                
             });
         }
         private void RegisterCommand()
