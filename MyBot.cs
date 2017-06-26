@@ -1,5 +1,5 @@
-# Venbot
-Supraball Meme Bot
+//# Venbot
+//Supraball Meme Bot
 using Discord;
 using Discord.Commands;
 using System;
@@ -24,14 +24,14 @@ namespace Venbot2
         string[] inph;
         string[] juan;
         string[] ven;
-
+        string[] publicGit;
 
 
         public MyBot()
         {
             rand = new Random();
 
-            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Vendetta48\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
+            lbquotes = System.IO.File.ReadAllLines(@"C:\Users\Ryan Feeley\Documents\Visual Studio 2017\Projects\Venbot2\Venbot2\lbquotes\lb.array.txt");
             System.Console.WriteLine("Contents of lb.array.txt = ");
             foreach (string lbquotes in lbquotes)
             {
@@ -90,6 +90,12 @@ namespace Venbot2
 
 
             };
+
+            publicGit = new string[]
+            {
+                "Contribute to VenBot if you want (pls no make fun of my code me noob) some stuff in the main code is hidden from git (like the bot token) https://github.com/Vendetta48/Venbot/blob/master/MyBot.cs"
+
+            };
             discord = new DiscordClient(x =>
             {
                 x.LogLevel = LogSeverity.Info;
@@ -110,6 +116,8 @@ namespace Venbot2
             RegisterInphCommand();
             RegisterJuanCommand();
             RegisterVenCommand();
+            RegisterPublicGitCommand();
+
 
             commands.CreateCommand("hello")
                 .Do(async (e) =>
@@ -118,7 +126,7 @@ namespace Venbot2
                 });
             discord.ExecuteAndWait(async () =>
             {
-                
+                await discord.Connect("MzI4NDE5NTI1MzMyNjk3MDg5.DDDs7Q.NdVY - 54X1EB9JrH0x9ocJtbWhxo", TokenType.Bot);
             });
         }
         private void RegisterCommand()
@@ -206,6 +214,17 @@ namespace Venbot2
 
                 });
 
+        }
+        private void RegisterPubicGitCommand()
+        { 
+
+            commands.CreateCommand("git")
+            .Do(async (e) =>
+            {
+                int randomGitIndex = rand.Next(publicGit);
+                string venbotgit = publicGit[randomGitIndex];
+                await e.Channel.SendMessage(venbotgit);
+        });
         }
 
         private void Log(object sender, LogMessageEventArgs e)
